@@ -9,10 +9,36 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import requests
 class Ui_Window2(object):
-    def logincheck(self):
+    def loginwithc(self):
         user="sd"
+        val=3 ##Implies for c
         user = self.code.toPlainText()
-        print(user)
+        f=open("input.txt","w")
+        f.write("3"+'\n')
+        f.close()
+        f=open("input.txt","a")
+        f.write(user)
+        f.close()
+    #print(user)       Just for debugging
+    def loginwithpy(self):
+        val=1 ##Implies for python
+        user=self.code.toPlainText()
+        f=open("input.txt","w")
+        f.write("1"+'\n')
+        f.close()
+        f=open("input.txt","a")
+        f.write(user)
+        f.close()
+    
+    def loginwithcpp(self):
+        val=2 ##Implies for cpp
+        user=self.code.toPlainText()
+        f=open("input.txt","w")
+        f.write("2"+'\n')
+        f.close()
+        f=open("input.txt","a")
+        f.write(user)
+        f.close()
     def setupUi(self, Window2):
         Window2.setObjectName("Window2")
         Window2.resize(1003, 740)
@@ -32,12 +58,26 @@ class Ui_Window2(object):
         self.code.setGeometry(QtCore.QRect(0, 0, 841, 441))
         self.code.setObjectName("code")
         self.scroller.setWidget(self.scrollContents)
-        self.submitbutton = QtWidgets.QPushButton(self.centralwidget)
-        self.submitbutton.setGeometry(QtCore.QRect(770, 520, 113, 32))
-        self.submitbutton.setObjectName("submitbutton")
+        
+        self.submitwithc = QtWidgets.QPushButton(self.centralwidget)
+        self.submitwithc.setGeometry(QtCore.QRect(682, 540, 151, 32))
+        self.submitwithc.setObjectName("submitwithc")
+        ## Submit with C function
+        self.submitwithc.clicked.connect(self.loginwithc)
         ##
-        self.submitbutton.clicked.connect(self.logincheck)
+        self.submitwithpy = QtWidgets.QPushButton(self.centralwidget)
+        self.submitwithpy.setGeometry(QtCore.QRect(70, 540, 151, 32))
+        self.submitwithpy.setObjectName("submitwithpy")
+        ## Submit with Python
+        self.submitwithc.clicked.connect(self.loginwithpy)
         ##
+        self.submitwithcpp = QtWidgets.QPushButton(self.centralwidget)
+        self.submitwithcpp.setGeometry(QtCore.QRect(372, 540, 151, 32))
+        self.submitwithcpp.setObjectName("submitwithcpp")
+        ##Submit with cpp
+        self.submitwithc.clicked.connect(self.loginwithcpp)
+        ##
+        
         Window2.setCentralWidget(self.centralwidget)
         self.statusBar = QtWidgets.QStatusBar(Window2)
         self.statusBar.setObjectName("statusBar")
