@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from login import Ui_Window1
+#from login import Ui_Window1
 import requests
 class Ui_Window2(object):
     def loginwithc(self):
@@ -86,13 +86,13 @@ class Ui_Window2(object):
         ##Submit with cpp
         self.submitwithcpp.clicked.connect(self.loginwithcpp)
         ##
-        
+        """
         self.logout = QtWidgets.QPushButton(self.centralwidget)
         self.logout.setGeometry(QtCore.QRect(700, 610, 113, 32))
         self.logout.setObjectName("logout")
         ##Logout button
         self.logout.clicked.connect(self.logout)
-        
+        """
         Window2.setCentralWidget(self.centralwidget)
         self.statusBar = QtWidgets.QStatusBar(Window2)
         self.statusBar.setObjectName("statusBar")
@@ -119,9 +119,9 @@ class Ui_Window2(object):
 
         self.Question.setText(_translate("Window2", q))
        # self.Question.setText(_translate("Window2", "Question: Given an array of integers, and a number ‘sum’, find the number of pairs of integers in the array whose sum is equal to ‘sum’?"))
-        self.submitbutton.setText(_translate("Window2", "Submit"))
-        self.actionRun.setText(_translate("Window2", "Run"))
-        self.actionExit.setText(_translate("Window2", "Exit"))
+       # self.submitbutton.setText(_translate("Window2", "Submit"))
+        #self.actionRun.setText(_translate("Window2", "Run"))
+        #self.actionExit.setText(_translate("Window2", "Exit"))
 
 
 if __name__ == "__main__":
