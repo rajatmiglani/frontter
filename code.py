@@ -7,12 +7,47 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from login import Ui_Window1
 import requests
 class Ui_Window2(object):
-    def logincheck(self):
+    def loginwithc(self):
         user="sd"
+        val=3 ##Implies for c
         user = self.code.toPlainText()
-        print(user)
+        f=open("input.txt","w")
+        f.write("3"+'\n')
+        f.close()
+        f=open("input.txt","a")
+        f.write(user)
+        f.close()
+    #print(user)       Just for debugging
+    def loginwithpy(self):
+        val=1 ##Implies for python
+        user=self.code.toPlainText()
+        f=open("input.txt","w")
+        f.write("1"+'\n')
+        f.close()
+        f=open("input.txt","a")
+        f.write(user)
+        f.close()
+    
+    def loginwithcpp(self):
+        val=2 ##Implies for cpp
+        user=self.code.toPlainText()
+        f=open("input.txt","w")
+        f.write("2"+'\n')
+        f.close()
+        f=open("input.txt","a")
+        f.write(user)
+        f.close()
+    
+    def logout(self):
+        print("Success")
+        #self.welcomeWindow = QtWidgets.QMainWindow()
+        #self.ui=Ui_MainWindow()
+        #self.ui=Ui_Window1()
+        #self.ui.setupUi(self.welcomeWindow)
+        #self.welcomeWindow.show()
     def setupUi(self, Window2):
         Window2.setObjectName("Window2")
         Window2.resize(1003, 740)
@@ -32,12 +67,32 @@ class Ui_Window2(object):
         self.code.setGeometry(QtCore.QRect(0, 0, 841, 441))
         self.code.setObjectName("code")
         self.scroller.setWidget(self.scrollContents)
-        self.submitbutton = QtWidgets.QPushButton(self.centralwidget)
-        self.submitbutton.setGeometry(QtCore.QRect(770, 520, 113, 32))
-        self.submitbutton.setObjectName("submitbutton")
+        
+        self.submitwithc = QtWidgets.QPushButton(self.centralwidget)
+        self.submitwithc.setGeometry(QtCore.QRect(682, 540, 151, 32))
+        self.submitwithc.setObjectName("submitwithc")
+        ## Submit with C function
+        self.submitwithc.clicked.connect(self.loginwithc)
         ##
-        self.submitbutton.clicked.connect(self.logincheck)
+        self.submitwithpy = QtWidgets.QPushButton(self.centralwidget)
+        self.submitwithpy.setGeometry(QtCore.QRect(70, 540, 151, 32))
+        self.submitwithpy.setObjectName("submitwithpy")
+        ## Submit with Python
+        self.submitwithpy.clicked.connect(self.loginwithpy)
         ##
+        self.submitwithcpp = QtWidgets.QPushButton(self.centralwidget)
+        self.submitwithcpp.setGeometry(QtCore.QRect(372, 540, 151, 32))
+        self.submitwithcpp.setObjectName("submitwithcpp")
+        ##Submit with cpp
+        self.submitwithcpp.clicked.connect(self.loginwithcpp)
+        ##
+        
+        self.logout = QtWidgets.QPushButton(self.centralwidget)
+        self.logout.setGeometry(QtCore.QRect(700, 610, 113, 32))
+        self.logout.setObjectName("logout")
+        ##Logout button
+        self.logout.clicked.connect(self.logout)
+        
         Window2.setCentralWidget(self.centralwidget)
         self.statusBar = QtWidgets.QStatusBar(Window2)
         self.statusBar.setObjectName("statusBar")
