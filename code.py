@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from login import Ui_Window1
 import requests
 class Ui_Window2(object):
     def loginwithc(self):
@@ -39,6 +40,14 @@ class Ui_Window2(object):
         f=open("input.txt","a")
         f.write(user)
         f.close()
+    
+    def logout(self):
+        print("Success")
+        #self.welcomeWindow = QtWidgets.QMainWindow()
+        #self.ui=Ui_MainWindow()
+        #self.ui=Ui_Window1()
+        #self.ui.setupUi(self.welcomeWindow)
+        #self.welcomeWindow.show()
     def setupUi(self, Window2):
         Window2.setObjectName("Window2")
         Window2.resize(1003, 740)
@@ -69,14 +78,20 @@ class Ui_Window2(object):
         self.submitwithpy.setGeometry(QtCore.QRect(70, 540, 151, 32))
         self.submitwithpy.setObjectName("submitwithpy")
         ## Submit with Python
-        self.submitwithc.clicked.connect(self.loginwithpy)
+        self.submitwithpy.clicked.connect(self.loginwithpy)
         ##
         self.submitwithcpp = QtWidgets.QPushButton(self.centralwidget)
         self.submitwithcpp.setGeometry(QtCore.QRect(372, 540, 151, 32))
         self.submitwithcpp.setObjectName("submitwithcpp")
         ##Submit with cpp
-        self.submitwithc.clicked.connect(self.loginwithcpp)
+        self.submitwithcpp.clicked.connect(self.loginwithcpp)
         ##
+        
+        self.logout = QtWidgets.QPushButton(self.centralwidget)
+        self.logout.setGeometry(QtCore.QRect(700, 610, 113, 32))
+        self.logout.setObjectName("logout")
+        ##Logout button
+        self.logout.clicked.connect(self.logout)
         
         Window2.setCentralWidget(self.centralwidget)
         self.statusBar = QtWidgets.QStatusBar(Window2)
