@@ -108,6 +108,9 @@ class Ui_Window2(object):
     def retranslateUi(self, Window2):
         _translate = QtCore.QCoreApplication.translate
         Window2.setWindowTitle(_translate("Window2", "MainWindow"))
+        self.submitwithc.setText(_translate("Window2","Submit with C"))
+        self.submitwithcpp.setText(_translate("Window2","Submit with C++"))
+        self.submitwithpy.setText(_translate("Window2","Submit with Py"))
         URL="http://127.0.0.1:8000/quiz/"
         PARAMS={}
         r=requests.get(url=URL)
