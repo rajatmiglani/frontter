@@ -21,11 +21,14 @@ class Ui_Window2(object):
         f.write(user)
         f.close()
         with open("input.txt", "r") as ins:
-        array = []
-        for line in ins:
-            array.append(line)
-        s=""
-        s=s.join(array)
+            array = []
+            for line in ins:
+                array.append(line)
+            s=""
+            s=s.join(array)
+        URL="http://127.0.0.1:8000/savefile/"
+        PARAMS={'code':s}
+        r=requests.post(url=URL,data=PARAMS)
     #print(user)       Just for debugging
     def loginwithpy(self):
         val=1 ##Implies for python
@@ -38,12 +41,15 @@ class Ui_Window2(object):
         f.close()
         
         with open("input.txt", "r") as ins:
-        array = []
-        for line in ins:
-            array.append(line)
-        s=""
-        s=s.join(array)
-    
+            array = []
+            for line in ins:
+                array.append(line)
+            s=""
+            s=s.join(array)
+        URL="http://127.0.0.1:8000/savefile/"
+        PARAMS={'code':s}
+        r=requests.post(url=URL,data=PARAMS)
+
     def loginwithcpp(self):
         val=2 ##Implies for cpp
         user=self.code.toPlainText()
@@ -55,12 +61,14 @@ class Ui_Window2(object):
         f.close()
         
         with open("input.txt", "r") as ins:
-        array = []
-        for line in ins:
-            array.append(line)
-        s=""
-        s=s.join(array)
-    
+            array = []
+            for line in ins:
+                array.append(line)
+            s=""
+            s=s.join(array)
+        URL="http://127.0.0.1:8000/savefile/"
+        PARAMS={'code':s}
+        r=requests.post(url=URL,data=PARAMS)
     def logout(self):
         print("Success")
         #self.welcomeWindow = QtWidgets.QMainWindow()
