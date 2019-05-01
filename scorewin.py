@@ -9,10 +9,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow3(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(847, 548)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+    def setupUi(self, Window3):
+        Window3.setObjectName("Window3")
+        Window3.resize(847, 548)
+        self.centralwidget = QtWidgets.QWidget(Window3)
         self.centralwidget.setObjectName("centralwidget")
         self.pbar = QtWidgets.QProgressBar(self.centralwidget)
         self.pbar.setGeometry(QtCore.QRect(290, 190, 261, 51))
@@ -21,30 +21,30 @@ class Ui_MainWindow3(object):
         self.scoreText = QtWidgets.QLabel(self.centralwidget)
         self.scoreText.setGeometry(QtCore.QRect(400, 270, 60, 16))
         self.scoreText.setObjectName("scoreText")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        Window3.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(Window3)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 847, 22))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        Window3.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(Window3)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        Window3.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Window3)
+        QtCore.QMetaObject.connectSlotsByName(Window3)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Window3):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.scoreText.setText(_translate("MainWindow", "TextLabel"))
+        Window3.setWindowTitle(_translate("Window3", "MainWindow"))
+        self.scoreText.setText(_translate("Window3", "TextLabel"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
+    Window3 = QtWidgets.QMainWindow()
     ui = Ui_MainWindow3()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    ui.setupUi(Window3)
+    Window3.show()
     sys.exit(app.exec_())
 
