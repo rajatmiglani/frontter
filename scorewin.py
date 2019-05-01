@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import requests
 class Ui_MainWindow3(object):
     def setupUi(self, Window3):
         Window3.setObjectName("Window3")
@@ -38,6 +38,11 @@ class Ui_MainWindow3(object):
         Window3.setWindowTitle(_translate("Window3", "MainWindow"))
         self.scoreText.setText(_translate("Window3", "TextLabel"))
 
+        #URL=""
+        PARAMS={}
+        r=requests.get(url=URL)
+        q=r.text()
+        self.scoreText.setText(_translate("Window3",q))
 
 if __name__ == "__main__":
     import sys
