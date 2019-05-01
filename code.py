@@ -78,10 +78,11 @@ class Ui_Window2(object):
         URL="http://127.0.0.1:8000/savefile/"
         PARAMS={'code':s}
         r=requests.post(url=URL,data=PARAMS)
-        self.welcomeWindow = QtWidgets.QMainWindow()
+        
+        self.welcomeWindow1 = QtWidgets.QMainWindow()
         self.ui=Ui_Window3()
-        self.ui.setupUi(self.welcomeWindow)
-        self.welcomeWindow.show()
+        self.ui.setupUi(self.welcomeWindow1)
+        self.welcomeWindow1.show()
 
     def logout(self):
         print("Success")
