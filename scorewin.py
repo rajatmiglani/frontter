@@ -15,7 +15,7 @@ class Ui_Window3(object):
         self.centralwidget = QtWidgets.QWidget(Window3)
         self.centralwidget.setObjectName("centralwidget")
         self.scoreText = QtWidgets.QLabel(self.centralwidget)
-        self.scoreText.setGeometry(QtCore.QRect(400, 270, 60, 16))
+        self.scoreText.setGeometry(QtCore.QRect(150, 220, 581, 81))
         self.scoreText.setObjectName("scoreText")
         Window3.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Window3)
