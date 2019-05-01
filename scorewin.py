@@ -35,9 +35,12 @@ class Ui_Window3(object):
         #self.scoreText.setText(_translate("Window3", "TextLabel"))
         
         #URL=""
+        URL="http://127.0.0.1:8000/marks/"
         PARAMS={}
         r=requests.get(url=URL)
         q=r.text
+        q=q[1:]
+        q=q[:-3]
         self.scoreText.setText(_translate("Window3",q))
 
 if __name__ == "__main__":
