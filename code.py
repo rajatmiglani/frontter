@@ -29,7 +29,12 @@ class Ui_Window2(object):
         URL="http://127.0.0.1:8000/savefile/"
         PARAMS={'code':s}
         r=requests.post(url=URL,data=PARAMS)
-    #print(user)       Just for debugging
+        self.welcomeWindow = QtWidgets.QMainWindow()
+        self.ui=Ui_Window3()
+        self.ui.setupUi(self.welcomeWindow)
+        self.welcomeWindow.show()
+
+            #print(user)       Just for debugging
     def loginwithpy(self):
         val=1 ##Implies for python
         user=self.code.toPlainText()
@@ -49,6 +54,10 @@ class Ui_Window2(object):
         URL="http://127.0.0.1:8000/savefile/"
         PARAMS={'code':s}
         r=requests.post(url=URL,data=PARAMS)
+        self.welcomeWindow = QtWidgets.QMainWindow()
+        self.ui=Ui_Window3()
+        self.ui.setupUi(self.welcomeWindow)
+        self.welcomeWindow.show()
 
     def loginwithcpp(self):
         val=2 ##Implies for cpp
@@ -69,6 +78,11 @@ class Ui_Window2(object):
         URL="http://127.0.0.1:8000/savefile/"
         PARAMS={'code':s}
         r=requests.post(url=URL,data=PARAMS)
+        self.welcomeWindow = QtWidgets.QMainWindow()
+        self.ui=Ui_Window3()
+        self.ui.setupUi(self.welcomeWindow)
+        self.welcomeWindow.show()
+
     def logout(self):
         print("Success")
         #self.welcomeWindow = QtWidgets.QMainWindow()
