@@ -20,6 +20,12 @@ class Ui_Window2(object):
         f=open("input.txt","a")
         f.write(user)
         f.close()
+        with open("input.txt", "r") as ins:
+        array = []
+        for line in ins:
+            array.append(line)
+        s=""
+        s=s.join(array)
     #print(user)       Just for debugging
     def loginwithpy(self):
         val=1 ##Implies for python
@@ -30,6 +36,13 @@ class Ui_Window2(object):
         f=open("input.txt","a")
         f.write(user)
         f.close()
+        
+        with open("input.txt", "r") as ins:
+        array = []
+        for line in ins:
+            array.append(line)
+        s=""
+        s=s.join(array)
     
     def loginwithcpp(self):
         val=2 ##Implies for cpp
@@ -40,6 +53,13 @@ class Ui_Window2(object):
         f=open("input.txt","a")
         f.write(user)
         f.close()
+        
+        with open("input.txt", "r") as ins:
+        array = []
+        for line in ins:
+            array.append(line)
+        s=""
+        s=s.join(array)
     
     def logout(self):
         print("Success")
