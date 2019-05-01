@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-#from login import Ui_Window1
+from scorewin import Ui_Window3
 import requests
 class Ui_Window2(object):
     def loginwithc(self):
