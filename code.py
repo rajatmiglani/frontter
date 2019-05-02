@@ -15,7 +15,7 @@ class Ui_Window2(object):
         val=3 ##Implies for c
         user = self.code.toPlainText()
         f=open("input.txt","w")
-        f.write("3"+'\n')
+        f.write("2 10 500000"+'\n')
         f.close()
         f=open("input.txt","a")
         f.write(user)
@@ -39,7 +39,7 @@ class Ui_Window2(object):
         val=1 ##Implies for python
         user=self.code.toPlainText()
         f=open("input.txt","w")
-        f.write("1"+'\n')
+        f.write("1 10 500000"+'\n')
         f.close()
         f=open("input.txt","a")
         f.write(user)
@@ -63,7 +63,7 @@ class Ui_Window2(object):
         val=2 ##Implies for cpp
         user=self.code.toPlainText()
         f=open("input.txt","w")
-        f.write("2"+'\n')
+        f.write("3 10 500000"+'\n')
         f.close()
         f=open("input.txt","a")
         f.write(user)
@@ -159,8 +159,8 @@ class Ui_Window2(object):
         r=requests.get(url=URL)
         #print(r.text)
         q=r.text
-        q=q[10:]
-        q=q[:-3]
+        q=q[1:]
+        q=q[:-1]
         #print(q)
 
         self.Question.setText(_translate("Window2", q))
